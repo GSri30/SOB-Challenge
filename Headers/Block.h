@@ -7,7 +7,7 @@
 
 class Block{
     private:
-        vector<string>transactions;
+        vector<MempoolTransaction>transactions;
 
     public:
         Block();
@@ -16,10 +16,10 @@ class Block{
         Block(const Block&);
 
     public:
-        vector<string> getTransacions();
+        vector<MempoolTransaction> getTransactions();
     
     public:
-        static Block compute_optimal_transactions();
+        static Block compute_optimal_transactions(const vector<MempoolTransaction>&);
 };
 
 #endif
