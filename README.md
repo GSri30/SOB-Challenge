@@ -8,6 +8,8 @@
 ## Summer of Bitcoin Code Challenge Solution
 
 ### Idea
+
+(First refer to [Further Optimizations](https://github.com/GSri30/SOB-Challenge#further-optimisations) section for a better understanding of my current approach.)
 - Using DP for calculating the max fee that can be obtained along with satisfying the block capacity condition. (0/1 knapsack)
 - And for making the parent transactions to come before (in the list), the algo uses Topological sorting. (i.e. it first makes a graph of the answer obtained from dp and then applies topo sort on the list)
 
