@@ -1,4 +1,5 @@
 #include "../Headers/Graph.h"
+#include<iostream>
 
 Graph::Graph(){}
 Graph::~Graph(){
@@ -25,7 +26,7 @@ const unordered_map<string,vector<string>>& Graph::getAL(){
 void Graph::DFS(const string&vertex,vector<string>&topo_ordering,unordered_map<string,bool>&visited){
     visited[vertex]=true;
     for(auto _vertex:this->AdjacencyList[vertex]){
-        if(visited[_vertex]) continue;
+        if(_vertex=="" or visited[_vertex]) continue;
         this->DFS(_vertex,topo_ordering,visited);
     }
     topo_ordering.push_back(vertex);
@@ -39,6 +40,7 @@ vector<string> Graph::TopoSort(){
         if(visited[vertex.first]) continue;
         this->DFS(vertex.first,topo_ordering,visited);
         for(auto _vertex:vertex.second){
+            if(_vertex=="" or visited[_vertex]) continue;
             this->DFS(_vertex,topo_ordering,visited);
         }
     }

@@ -38,10 +38,12 @@ vector<MempoolTransaction> parse_mempool_csv(){
         while(getline(_line,column,',')){
             current_transaction.push_back(column);
         }
-        stringstream __line(current_transaction[3]);
         vector<string>current_parent_transactions;
-        while(getline(__line,column,';')){
-            current_parent_transactions.push_back(column);
+        if (current_transaction.size()>3){
+            stringstream __line(current_transaction[3]);
+            while(getline(__line,column,';')){
+                current_parent_transactions.push_back(column);
+            }
         }
         
         List_Transactions.push_back(MempoolTransaction(current_transaction[0],stoi(current_transaction[1]),stoi(current_transaction[2]),current_parent_transactions));

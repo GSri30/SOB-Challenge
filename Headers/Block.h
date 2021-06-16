@@ -12,7 +12,8 @@ using namespace std;
 class Block{
     private:
         vector<MempoolTransaction>transactions;
-        static const int MAX_WEIGHT=1000;
+        // Given this should be 4000000
+        static const int MAX_WEIGHT=100000;
 
     public:
         Block();
