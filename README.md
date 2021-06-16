@@ -38,6 +38,10 @@ g++ *.cpp Src/*.cpp
 ### Final Answer
 - After considering the block capacity as 1e5, I was able to get a fees of 1998524. (Though this is wrong as the problem was asked for a block capacity of 4e6 which is far beyond the computational power of my laptop for the given input)
 
+### Test Answer
+- To check the *feasibility* of an answer (any answer to a given input), use [Test/Check.cpp](https://github.com/GSri30/SOB-Challenge/blob/main/Test/Check.cpp) file.
+
+NOTE : *Place both mempool.csv and block.txt in the same location of [Test/Check.cpp](https://github.com/GSri30/SOB-Challenge/blob/main/Test/Check.cpp) to check for the feasibility.*
 
 ### Further optimisations
 - Though it could have been possible to obtain a better fees just by using a naive algorithm (sort by fees/weight), but it only gives better results for the current given input. And there are many counter cases that are possible, where it could fail. (even for much smaller inputs). Therefore I have proceeded with the optimised algorithm itself, though it doesn't provide better results for the given input. But with a higher computational power laptop,the algo will return the best possible results (independent of input, which is not the case while using a navie approach). Hence there is always some tradeoff.
