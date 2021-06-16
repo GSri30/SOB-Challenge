@@ -1,3 +1,10 @@
+[![Version](https://img.shields.io/badge/version-1.0.0-green)]("#")
+[![Issues](https://img.shields.io/github/issues-raw/GSri30/SOB-Challenge)](https://github.com/GSri30/SOB-Challenge/issues)
+[![Closed Issues](https://img.shields.io/github/issues-closed-raw/GSri30/SOB-Challenge)](https://github.com/GSri30/SOB-Challenge/issues)
+[![PR's Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat)]("#") 
+[![Pull Requests](https://img.shields.io/github/issues-pr/GSri30/SOB-Challenge)]("#")
+[![Contributors](https://img.shields.io/github/contributors/GSri30/SOB-Challenge)]("#")
+
 ## Summer of Bitcoin Code Challenge Solution
 
 ### Idea
@@ -32,4 +39,4 @@ g++ *.cpp Src/*.cpp
 
 
 ### Further optimisations
-- Though it could have been possible to obtain a better fees just by using a naive algorithm (sort by fees/weight), but it only gives better results for the current given input. And there are many counter cases that are possible, where it could fail. (even for much smaller inputs). Therefore I have proceeded with the optimised algorithm itself, though it doesn't provide better results for the given input. But with a higher computational power laptop,the algo to return the best possible results (independent of input, which is not the case while using a navie approach). Hence there is always some tradeoff.
+- Though it could have been possible to obtain a better fees just by using a naive algorithm (sort by fees/weight), but it only gives better results for the current given input. And there are many counter cases that are possible, where it could fail. (even for much smaller inputs). Therefore I have proceeded with the optimised algorithm itself, though it doesn't provide better results for the given input. But with a higher computational power laptop,the algo will return the best possible results (independent of input, which is not the case while using a navie approach). Hence there is always some tradeoff.
