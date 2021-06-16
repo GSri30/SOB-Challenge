@@ -25,6 +25,7 @@
 g++ *.cpp Src/*.cpp
 ./a.out
 ```
+*Include mempool.csv in the same location where Main.cpp is present. It is also the same location where block.txt is generated.*
 
 ### Assumptions made
 
