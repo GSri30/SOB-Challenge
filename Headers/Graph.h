@@ -4,6 +4,8 @@
 #include<unordered_map>
 #include<string>
 #include<vector>
+#include<algorithm>
+#include "../Headers/MempoolTransaction.h"
 
 using namespace std;
 
@@ -21,7 +23,10 @@ class Graph{
     //Member functions
     public:
         void AddEdge(string ,string);
-        void DAG();
+        vector<string> TopoSort();
+
+    private:
+        void DFS(const string&,vector<string>&,unordered_map<string,bool>&);
 
     //Getters and Setters
     public:

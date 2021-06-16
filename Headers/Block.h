@@ -4,10 +4,15 @@
 #include<vector>
 #include<string>
 #include "MempoolTransaction.h"
+#include "Graph.h"
+#include<iostream>
+
+using namespace std;
 
 class Block{
     private:
         vector<MempoolTransaction>transactions;
+        static const int MAX_WEIGHT=1000;
 
     public:
         Block();
@@ -19,7 +24,7 @@ class Block{
         vector<MempoolTransaction> getTransactions();
     
     public:
-        static Block compute_optimal_transactions(const vector<MempoolTransaction>&);
+        static vector<string> compute_optimal_transactions(vector<MempoolTransaction>&);
 };
 
 #endif

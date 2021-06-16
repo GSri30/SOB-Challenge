@@ -23,7 +23,7 @@ class MempoolTransaction{
         string getTXID();
         int getFee();
         int getWeight();
-        vector<string> getParentTransacions();
+        vector<string> getParentTransactions();
 };
 
 #endif

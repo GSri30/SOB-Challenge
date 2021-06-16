@@ -9,15 +9,15 @@
 using namespace std;
 
 vector<MempoolTransaction> parse_mempool_csv();
-void output_block_txt(Block);
+void output_block_txt(vector<string>);
 
 int main(){
 
     auto List_Transactions=parse_mempool_csv();
     
-    auto valid_block=Block::compute_optimal_transactions(List_Transactions);
+    auto valid_block_transactions=Block::compute_optimal_transactions(List_Transactions);
 
-    output_block_txt(valid_block);
+    output_block_txt(valid_block_transactions);
 
     return 0;
 }
@@ -52,13 +52,13 @@ vector<MempoolTransaction> parse_mempool_csv(){
     return List_Transactions;
 }
 
-void output_block_txt(Block valid_block){
+void output_block_txt(vector<string> valid_block_transactions){
 
     ofstream file_output;
     file_output.open("block.txt");
 
-    for(MempoolTransaction transaction:valid_block.getTransactions()){
-        file_output<<transaction.getTXID()<<endl;
+    for(string transaction:valid_block_transactions){
+        file_output<<transaction<<endl;
     }
 
     file_output.close();

@@ -28,6 +28,6 @@ int MempoolTransaction::getFee(){
 int MempoolTransaction::getWeight(){
     return this->weight;
 }
-vector<string> MempoolTransaction::getParentTransacions(){
+vector<string> MempoolTransaction::getParentTransactions(){
     return this->parent_transactions;
 }
