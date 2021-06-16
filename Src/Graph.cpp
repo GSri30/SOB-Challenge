@@ -1,5 +1,4 @@
 #include "../Headers/Graph.h"
-#include<iostream>
 
 Graph::Graph(){}
 Graph::~Graph(){
